@@ -1,0 +1,91 @@
+header:
+    ID": "4220"
+    name: "module_link_elbow_90.yaml"
+    date: "2023-10-12"
+    author: "EdaordoRomiti"
+    affiliation: "IIT"
+    email: "edoardo.romiti@iit.it"
+    cost: 0
+    type: "link"
+    family: "alberoboticsGenA"
+    label: "Passive Link Elbow 90°"
+    disabled: False
+    # offsets:
+    #     yaw: 
+    #         - label: "-π/2" 
+    #           value: -1.5707963267948966
+    #         - 0
+    #         - label: "π/2" 
+    #           value: 1.5707963267948966
+    #         - label: "π" 
+    #           value: 3.141592653589793
+    reversible: false
+kinematics_convention: DH_ext
+kinematics:
+    joint: null
+    link:
+        a_l: 0.0
+        alpha_l: -1.57
+        p_l: 0.083
+        n_l: 0.083
+        delta_l_in: 0
+        delta_l_out: 3.14
+dynamics:
+    body_1:
+        mass: 1.04
+        inertia_tensor:
+            I_xx: 0.007
+            I_yy: 0.006
+            I_zz: 0.004
+            I_xy: -5.0e-06
+            I_xz: 5.0e-06
+            I_yz: 5.0e-06
+        CoM:
+            x: 0.0
+            y: 0.025
+            z: 0.05
+visual:
+    body_1:
+        -
+            type: mesh
+            parameters:
+                file: package://modular_resources/models/modular/meshes/alberobotics/passive_link_l_90.stl
+                scale: [0.001, 0.001, 0.001]
+                color: 
+                    material_name: grey
+            pose:
+                x: 0.0
+                y: 0.0
+                z: 0.0
+                roll: 0.0
+                pitch: 0.0
+                yaw: 0.0
+
+collision:
+    body_1:
+        -
+            type: mesh
+            parameters:
+                file: package://modular_resources/models/modular/meshes/alberobotics/passive_link_l_90.stl
+                scale: [0.001, 0.001, 0.001]
+            pose:
+                x: 0.0
+                y: 0.0
+                z: 0.0
+                roll: 0.0
+                pitch: 0.0
+                yaw: 0.0
+flange_size: big
+size_in: null
+size_out: null
+type: link
+gazebo:
+    body_1:
+        mu1: 0.2
+        mu2: 0.2
+        kp: 1000000.0
+        kd: 1.0
+        maxVel: 0.0
+        minDepth: 0.0001
+        material: 'Gazebo/Grey'
+        selfCollide: true
